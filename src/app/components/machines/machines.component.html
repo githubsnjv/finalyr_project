@@ -1,0 +1,289 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&amp;display=swap">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <script src="https://kit.fontawesome.com/552b408a2f.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body id="page-top">
+
+
+    <!-- navbar -->
+    <div class="align-items-center text-dark text-uppercase data-bs-toggle card bt-5 "
+        style="background-color: rgb(123, 82, 82); padding: 1cm;">
+        <header>Naatesh & Co</header>
+    </div>
+
+
+    <div id="wrapper" class="mt-3">
+        <div id="content-wrapper" class="d-flex flex-column">
+            <div id="content">
+
+                <div class="container-fluid">
+
+                    <div class="row">
+                        <div class="col-md-6 col-xl-3 mb-4">
+                            <div class="card shadow border-start-primary py-2">
+                                <div class="card-body">
+                                    <div class="row align-items-center no-gutters">
+                                        <div class="col me-2">
+                                            <div class="text-uppercase text-primary fw-bold text-xs mb-1"><span>Machine
+                                                    alloted</span></div>
+                                            <div class="text-dark fw-bold h5 mb-0"><span>{{res[0].job_no}}</span></div>
+                                        </div>
+                                        <div class="col-auto"><i class="fas fa-cog fa-2x text-gray-300"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-6 col-xl-3 mb-4">
+                            <div class="card shadow border-start-success py-2 ">
+                                <div class="card-body" data-bs-toggle="collapse" href="#collapseExample">
+                                    <div class="row align-items-center no-gutters">
+                                        <div class="col me-2">
+                                            <div class="text-uppercase text-success fw-bold text-xs mb-1"><span>Machine
+                                                    status</span></div>
+                                            <div class="text-dark fw-bold h5 mb-0"><span>{{res[0].status}}</span></div>
+                                        </div>
+                                        <div class="col-auto"><i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-xl-3 mb-4">
+                            <div class="card shadow border-start-info py-2">
+                                <div class="card-body">
+                                    <div class="row align-items-center no-gutters">
+                                        <div class="col me-2">
+                                            <div class="text-uppercase text-info fw-bold text-xs mb-1">
+                                                <span>Tasks</span>
+                                            </div>
+                                            <div class="row g-0 align-items-center">
+                                                <div class="col-auto">
+                                                    <div class="text-dark fw-bold h5 mb-0 me-3">
+                                                        <span>{{res[0].task}}%</span></div>
+                                                </div>
+                                                <div class="col">
+                                                    <div class="progress progress-sm">
+                                                        <div class="progress-bar bg-info" aria-valuenow="75"
+                                                            aria-valuemin="0" aria-valuemax="100" style="width: 50%;">
+                                                            <span class="visually-hidden">50%</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto"><i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-xl-3 mb-4">
+                            <div class="card shadow border-start-success py-2 ">
+                                <div class="card-body" data-bs-toggle="collapse" href="#collapseYarndetails">
+                                    <div class="row align-items-center no-gutters">
+                                        <div class="col me-2">
+                                            <div class="text-uppercase text-warning fw-bold text-xs mb-1"><span>Yarn details
+                                                </span></div>
+                                            <div class="text-dark fw-bold h5 mb-0"><span></span></div>
+                                        </div>
+                                        <div class="col-auto"><i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- status collapse -->
+
+
+                        <div class="card dark collapse md-5 mb-5 " id="collapseExample"
+                            style="background-color: black;">
+                            <div class="card shadow border-start-warning py-2 mb-3 mt-3">
+                                <div class="card-body">
+                                    <div class="row align-items-center no-gutters">
+                                        <div class="col me-2">
+                                            <div class="text-uppercase text-success fw-bold text-xs mb-1"><span> Machine
+                                                    stop count
+                                                </span>
+                                            </div>
+                                            <div class="text-dark fw-bold h5 mb-0"><span>{{res[0].stop}}</span></div>
+                                        </div>
+                                        <div class="col-auto"><i class="fas fa-comments fa-2x text-gray-300"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card shadow border-start-warning py-2 mb-3">
+                                <div class="card-body">
+                                    <div class="row align-items-center no-gutters">
+                                        <div class="col me-2">
+                                            <div class="text-uppercase text-success fw-bold text-xs mb-1"><span> Machine
+                                                    RPM
+                                                </span>
+                                            </div>
+                                            <div class="text-dark fw-bold h5 mb-0"><span>{{res[0].rpm}}</span></div>
+                                        </div>
+                                        <div class="col-auto"><i class="fas fa-comments fa-2x text-gray-300"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card shadow border-start-warning py-2 mb-3">
+                                <div class="card-body">
+                                    <div class="row align-items-center no-gutters">
+                                        <div class="col me-2">
+                                            <div class="text-uppercase text-success fw-bold text-xs mb-1"><span>No.of
+                                                    Rolls
+                                                </span>
+                                            </div>
+                                            <div class="text-dark fw-bold h5 mb-0"><span>{{res[0].rolls}}</span></div>
+                                        </div>
+                                        <div class="col-auto"><i class="fas fa-comments fa-2x text-gray-300"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+                        <!-- status card collapse -->
+
+                        <!-- yarn details -->
+
+
+
+                        <div class="card black collapse md-5 mb-5 " id="collapseYarndetails"
+                            style="background-color: black;">
+
+                            <div class="card shadow border-start-warning py-2 mt-3 mb-3 ">
+                                <div class="card-body">
+                                    <div class="row align-items-center no-gutters">
+                                        <div class="col me-2">
+                                            <div class="text-uppercase text-warning fw-bold text-xs mb-1"><span>Yarn Quantity
+                                                </span>
+                                            </div>
+                                            <div class="text-dark fw-bold h5 mb-0"><span>{{res[0].rolls}}</span></div>
+                                        </div>
+                                        <div class="col-auto"><i class="fas fa-comments fa-2x text-gray-300"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="card shadow border-start-warning py-2 mb-3">
+                                <div class="card-body">
+                                    <div class="row align-items-center no-gutters">
+                                        <div class="col me-2">
+                                            <div class="text-uppercase text-warning fw-bold text-xs mb-1"><span> Yarn Count
+                                                   
+                                                </span>
+                                            </div>
+                                            <div class="text-dark fw-bold h5 mb-0"><span>{{res[0].stop}}</span></div>
+                                        </div>
+                                        <div class="col-auto"><i class="fas fa-comments fa-2x text-gray-300"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card shadow border-start-warning py-2 mb-3">
+                                <div class="card-body">
+                                    <div class="row align-items-center no-gutters">
+                                        <div class="col me-2">
+                                            <div class="text-uppercase text-warning fw-bold text-xs mb-1"><span> Yarn Colour
+                                                </span>
+                                            </div>
+                                            <div class="text-dark fw-bold h5 mb-0"><span>{{res[0].rpm}}</span></div>
+                                        </div>
+                                        <div class="col-auto"><i class="fas fa-comments fa-2x text-gray-300"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card shadow border-start-warning py-2 mb-3">
+                                <div class="card-body">
+                                    <div class="row align-items-center no-gutters">
+                                        <div class="col me-2">
+                                            <div class="text-uppercase text-warning fw-bold text-xs mb-1"><span>No. of bags
+                                                </span>
+                                            </div>
+                                            <div class="text-dark fw-bold h5 mb-0"><span>{{res[0].rolls}}</span></div>
+                                        </div>
+                                        <div class="col-auto"><i class="fas fa-comments fa-2x text-gray-300"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card shadow border-start-warning py-2 mb-3">
+                                <div class="card-body">
+                                    <div class="row align-items-center no-gutters">
+                                        <div class="col me-2">
+                                            <div class="text-uppercase text-warning fw-bold text-xs mb-1"><span>Yarn weight
+                                                </span>
+                                            </div>
+                                            <div class="text-dark fw-bold h5 mb-0"><span>{{res[0].rolls}}</span></div>
+                                        </div>
+                                        <div class="col-auto"><i class="fas fa-comments fa-2x text-gray-300"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card shadow border-start-warning py-2 mb-3">
+                                <div class="card-body">
+                                    <div class="row align-items-center no-gutters">
+                                        <div class="col me-2">
+                                            <div class="text-uppercase text-warning fw-bold text-xs mb-1"><span>Received date
+                                                </span>
+                                            </div>
+                                            <div class="text-dark fw-bold h5 mb-0"><span>{{res[0].rolls}}</span></div>
+                                        </div>
+                                        <div class="col-auto"><i class="fas fa-comments fa-2x text-gray-300"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card shadow border-start-warning py-2 mb-3">
+                                <div class="card-body">
+                                    <div class="row align-items-center no-gutters">
+                                        <div class="col me-2">
+                                            <div class="text-uppercase text-warning fw-bold text-xs mb-1"><span>No. of bags
+                                                </span>
+                                            </div>
+                                            <div class="text-dark fw-bold h5 mb-0"><span>{{res[0].rolls}}</span></div>
+                                        </div>
+                                        <div class="col-auto"><i class="fas fa-comments fa-2x text-gray-300"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- yarn details -->
+
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="row">
+                
+            </div>
+
+        </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>
+    </div>
+
+
+
+</body>
