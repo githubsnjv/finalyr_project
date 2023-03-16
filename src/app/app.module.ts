@@ -12,7 +12,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import {MatButtonModule} from '@angular/material/button';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatFormFieldModule, MAT_FORM_FIELD_DEFAULT_OPTIONS} from '@angular/material/form-field';
 import {MatIconModule} from '@angular/material/icon'
 import {MatInputModule} from '@angular/material/input';
 @NgModule({
@@ -20,7 +20,8 @@ import {MatInputModule} from '@angular/material/input';
     AppComponent,
     DashboardComponent,
     MachinesComponent,
-    FormsComponent
+    FormsComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -32,10 +33,13 @@ import {MatInputModule} from '@angular/material/input';
     MatIconModule,
     MatInputModule,
     FormsModule,
-    ReactiveFormsModule,
-    MatFormFieldModule
+    
+    MatFormFieldModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+    {provide:   MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: {appearance: 'outline'}}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
