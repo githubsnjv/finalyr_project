@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl,FormGroup, Validators } from '@angular/forms';
 import { CrudService } from 'src/app/crud.service';
 import { FormBuilder } from '@angular/forms';
+import { take,map } from 'rxjs';
 
 
 
@@ -12,12 +13,32 @@ import { FormBuilder } from '@angular/forms';
 })
 export class FormsComponent implements OnInit {
 
-  o: any;
-
+  
+  machine_count:number;
+  arr:any=[];
   profileForm:FormGroup<any>
+  formValue:any;
+ i:any;
  
   
-  constructor(private data: CrudService,private fb:FormBuilder) {}
+  
+  constructor(private data: CrudService,private fb:FormBuilder) {
+
+    //get the total number of machine counts and add it into the spinner
+
+    this.data.machine_count().pipe(take(1),map((res:any)=>{
+      return res.counts;
+    })).subscribe(rs=>{
+      this.machine_count=rs;
+      console.log(this.machine_count)
+      for(this.i=1;this.i<=this.machine_count;this.i++){
+        this.arr.push(this.i)
+  }
+      
+    })
+
+    
+  }
 
   
 
@@ -30,31 +51,18 @@ export class FormsComponent implements OnInit {
       weight: [''],
       received_date: [''],
       dia:[''],
-      gg:['']
+      gg:[''],
+      mac_no:['']
      
     });
   }
 
 
-  sub() {
-
-
-    // this.data.current_id().pipe(take(1)).subscribe(res => {
-
-    //   this.o = res;
-    //   console.log(this.o);
-
-    // })
-
-
-    // console.log(this.o)
-    // this.data.current_id_add(this.o.id + 1);
-    // console.log(this.o.id + 1);
-
-    this.data.add_form_data(this.profileForm.value)
-    console.log(this.profileForm.value)
-
-
+  sub() {  
+    
+    
+    this.data.machineAllotment(this.profileForm.value)
+   
   }
 
 }

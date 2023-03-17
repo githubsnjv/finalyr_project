@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import {AngularFirestore} from '@angular/fire/compat/firestore'
+import { FormBuilder } from '@angular/forms';
+import { map } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -27,6 +29,15 @@ export class CrudService {
 
   add_form_data(o:any){
     this.afs.collection("/final").doc(this.afs.createId()).set(o);
+  }
+
+  machine_count(){
+     return this.afs.collection("machine_details").doc("details").valueChanges();
+  }
+
+  machineAllotment(data:any){
+    
+    this.afs.collection("machines").doc(data.mac_no.toString()).set(data);
   }
 
 }

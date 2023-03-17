@@ -63,10 +63,14 @@
             </div>
 
             <div class="div">
-              <mat-form-field appearance="outline" fx1flex="50">
-                <mat-label>machine No</mat-label>
-                <input matInput placeholder="enter the details" formControlName="gg">
+              <mat-form-field appearance="fill">
+                <mat-label>Select machine No</mat-label>
+                <mat-select formControlName="mac_no">
+                  <mat-option *ngFor="let p of arr" [value]="p">{{p}}</mat-option>
+                </mat-select>
+             
               </mat-form-field>
+
             </div>
     
             <div class="div">
