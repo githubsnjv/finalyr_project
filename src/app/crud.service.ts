@@ -40,4 +40,9 @@ export class CrudService {
     this.afs.collection("machines").doc(data.mac_no.toString()).set(data);
   }
 
+  getmachines(){
+    return this.afs.collection("machines").valueChanges();
+  }
+
+
 }

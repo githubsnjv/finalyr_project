@@ -1,1 +1,23 @@
-<p>dashboard works!</p>
+
+
+ <div *ngFor="let f of las">
+    <div class="row" >
+        <div class="col-md-6 col-xl-3 my-2">
+            <div class="card shadow border-start-primary py-2">
+                <div class="card-body">
+                    <div class="row align-items-center no-gutters">
+                        <div class="col me-2">
+                            <div class="text-primary fw-bold text-xs mb-1"><span>Machine
+                                    alloted</span></div>
+                            <div class="text-dark fw-bold h5 mb-0"><span>{{f}}</span></div>
+                        </div>
+                        <div class="col-auto"><i class="fas fa-cog fa-2x text-gray-300"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+   </div>
+ </div>
+
+    
+    
