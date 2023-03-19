@@ -44,5 +44,20 @@ export class CrudService {
     return this.afs.collection("machines").valueChanges();
   }
 
+  job_number_retrival(){
+    return this.afs.collection("machine_details").doc("job number").valueChanges();
+  }
+
+  job_number_addon(previous_job_num:number){
+    return this.afs.collection("machine_details").doc("job number").set({"job_number":previous_job_num+1})
+  }
+
+  jobAllotment(data:any,jobId:any){
+     this.afs.collection("jobs").doc(jobId.toString()).set(data);
+  }
+
+  getdocname(){
+    return this.afs.collection("machines").snapshotChanges();
+  }
 
 }

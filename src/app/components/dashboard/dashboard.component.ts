@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { map } from 'rxjs';
 import { CrudService } from 'src/app/crud.service';
 
@@ -7,11 +7,18 @@ import { CrudService } from 'src/app/crud.service';
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.css']
 })
-export class DashboardComponent implements OnInit {
+export class DashboardComponent implements OnInit,OnDestroy {
 
   las=[];
   val:any
-  constructor(private data:CrudService) { }
+  constructor(private data:CrudService) { 
+
+    this.data.getdocname().subscribe(res=>{
+      console.log(res[0])
+    })
+
+
+  }
 
   ngOnInit(): void {
    
@@ -28,6 +35,10 @@ export class DashboardComponent implements OnInit {
     })
   }
 
+
+  ngOnDestroy(): void {
+
+  }
   
   
 

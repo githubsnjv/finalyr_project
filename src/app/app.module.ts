@@ -21,6 +21,7 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatCardModule} from '@angular/material/card';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { SidenavbarComponent } from './components/sidenavbar/sidenavbar.component';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,7 +47,9 @@ import { SidenavbarComponent } from './components/sidenavbar/sidenavbar.componen
     ReactiveFormsModule,
     MatToolbarModule,
     MatSidenavModule,
-    MatCardModule
+    MatCardModule,
+    MatProgressSpinnerModule
+    
   ],
   providers: [
     {provide:   MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: {appearance: 'outline'}}

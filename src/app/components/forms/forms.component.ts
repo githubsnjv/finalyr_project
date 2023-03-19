@@ -19,6 +19,8 @@ export class FormsComponent implements OnInit {
   profileForm:FormGroup<any>
   formValue:any;
  i:any;
+ job_number:number;
+
  
   
   
@@ -57,12 +59,35 @@ export class FormsComponent implements OnInit {
     });
   }
 
+  //form reset
+
+  formReset(){
+    this.profileForm.reset();
+  }
 
   sub() {  
+    //retrives the job_num
+    this.data.job_number_retrival().pipe(take(1)).subscribe((res:any)=>{
+      this.job_number=res.job_number
+      console.log(this.job_number)
+      
+      //ADD THE JOB_NUMBER BY ONE
+      this.data.job_number_addon(this.job_number).then(()=>{
+        console.log("value updated!")
+      })
+
+
+      //job allotment ot machine and machine number
+
+        this.data.machineAllotment(this.profileForm.value);
+        this.data.jobAllotment(this.profileForm.value,this.job_number);
+       
+      this.formReset();
+      
+    });
+
     
-    
-    this.data.machineAllotment(this.profileForm.value)
-   
+
   }
 
 }
