@@ -9,7 +9,7 @@ const routes: Routes = [
   {path:'entry',component:FormsComponent},
   {path:'mach',component:MachinesComponent},
   {path:'dash',component:DashboardComponent},
-  {path:"",redirectTo:'home'}
+  {path:"",redirectTo:'dash'}
 ];
 
 @NgModule({
