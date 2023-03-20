@@ -1,6 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { map } from 'rxjs';
 import { CrudService } from 'src/app/crud.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-dashboard',
@@ -11,10 +12,13 @@ export class DashboardComponent implements OnInit,OnDestroy {
 
   las=[];
   val:any
-  constructor(private data:CrudService) { 
+
+  id: any;
+  paramsSub: any;
+  constructor(private data:CrudService,private activatedRoute: ActivatedRoute) { 
 
     this.data.getdocname().subscribe(res=>{
-      console.log(res[0])
+      console.log(res)
     })
 
 
@@ -38,6 +42,11 @@ export class DashboardComponent implements OnInit,OnDestroy {
 
   ngOnDestroy(): void {
 
+  }
+
+  cardshow(num:any){
+    console.log(num);
+    
   }
   
   

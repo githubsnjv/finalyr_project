@@ -7,7 +7,7 @@ import { MachinesComponent } from './components/machines/machines.component';
 
 const routes: Routes = [
   {path:'entry',component:FormsComponent},
-  {path:'mach',component:MachinesComponent},
+  {path:'mach/:id',component:MachinesComponent},
   {path:'dash',component:DashboardComponent},
   {path:"",redirectTo:'dash'}
 ];

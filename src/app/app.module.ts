@@ -22,6 +22,8 @@ import {MatCardModule} from '@angular/material/card';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { SidenavbarComponent } from './components/sidenavbar/sidenavbar.component';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
 @NgModule({
   declarations: [
     AppComponent,
@@ -48,11 +50,14 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
     MatToolbarModule,
     MatSidenavModule,
     MatCardModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatDatepickerModule,
+    MatNativeDateModule
     
   ],
   providers: [
-    {provide:   MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: {appearance: 'outline'}}
+    {provide:   MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: {appearance: 'outline'}},
+    MatDatepickerModule,MatNativeDateModule
   ],
   bootstrap: [AppComponent]
 })

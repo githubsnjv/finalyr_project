@@ -14,8 +14,8 @@ export class CrudService {
     this.afs.collection("/final").doc("1").set({rpm:120});
     }
 
-  retrive(){
-    return this.afs.collection("/final").valueChanges();
+  retrive(id:any){
+    return this.afs.collection("/machines").doc(id.toString()).valueChanges();
   }
 
   //gets the current id no to create the job no

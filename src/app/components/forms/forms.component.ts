@@ -3,6 +3,7 @@ import { FormControl,FormGroup, Validators } from '@angular/forms';
 import { CrudService } from 'src/app/crud.service';
 import { FormBuilder } from '@angular/forms';
 import { take,map } from 'rxjs';
+import { ActivatedRoute, Router } from '@angular/router';
 
 
 
@@ -24,7 +25,7 @@ export class FormsComponent implements OnInit {
  
   
   
-  constructor(private data: CrudService,private fb:FormBuilder) {
+  constructor(private data: CrudService,private fb:FormBuilder,private route:Router) {
 
     //get the total number of machine counts and add it into the spinner
 
@@ -83,6 +84,7 @@ export class FormsComponent implements OnInit {
         this.data.jobAllotment(this.profileForm.value,this.job_number);
        
       this.formReset();
+      this.route.navigateByUrl("/dash")
       
     });
 
