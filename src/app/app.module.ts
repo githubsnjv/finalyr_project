@@ -24,6 +24,8 @@ import { SidenavbarComponent } from './components/sidenavbar/sidenavbar.componen
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
+import { ReportReportComponent } from './components/report-report/report-report.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,6 +34,8 @@ import { MatNativeDateModule } from '@angular/material/core';
     FormsComponent,
     NavbarComponent,
     SidenavbarComponent,
+    ReportReportComponent,
+   
     
   ],
   imports: [
