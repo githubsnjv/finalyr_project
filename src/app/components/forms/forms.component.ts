@@ -79,9 +79,11 @@ export class FormsComponent implements OnInit {
 
 
       //job allotment ot machine and machine number
-
+      
         this.data.machineAllotment(this.profileForm.value);
         this.data.jobAllotment(this.profileForm.value,this.job_number);
+        //add the job no to the machine
+        this.data.job_id_to_machine(this.profileForm.value,this.job_number)
        
       this.formReset();
       this.route.navigateByUrl("/dash")

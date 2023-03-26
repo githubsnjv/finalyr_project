@@ -60,4 +60,8 @@ export class CrudService {
     return this.afs.collection("machines").snapshotChanges();
   }
 
+  job_id_to_machine(machine_no:any,job_no:any){
+    this.afs.collection('machines').doc(machine_no.mac_no.toString()).update({"job_no":job_no});
+  }
+
 }
