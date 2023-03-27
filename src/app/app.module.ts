@@ -25,6 +25,7 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { ReportReportComponent } from './components/report-report/report-report.component';
+import { JobAllotmentComponent } from './components/job-allotment/job-allotment.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { ReportReportComponent } from './components/report-report/report-report.
     NavbarComponent,
     SidenavbarComponent,
     ReportReportComponent,
+    JobAllotmentComponent,
    
     
   ],

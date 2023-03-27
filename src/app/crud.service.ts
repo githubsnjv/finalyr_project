@@ -8,6 +8,7 @@ import { map } from 'rxjs';
 })
 export class CrudService {
 
+ 
   constructor(private afs:AngularFirestore) { }
 
   add() {
@@ -62,6 +63,11 @@ export class CrudService {
 
   job_id_to_machine(machine_no:any,job_no:any){
     this.afs.collection('machines').doc(machine_no.mac_no.toString()).update({"job_no":job_no});
+  }
+
+  dailyallotment_job(mac:any,data:any){
+    this.afs.collection('loom_automation').doc('machines').collection(data.mac_no.toString()).doc(new Date().toString()).set(data);
+    
   }
 
 }
