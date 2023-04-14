@@ -35,7 +35,7 @@ export class DashboardComponent implements OnInit,OnDestroy {
     })).subscribe(res=>{
      
       this.las=res;
-      console.log(this.las,"kjshch");
+      console.log(this.las);
     })
   }
 
