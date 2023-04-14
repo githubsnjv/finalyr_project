@@ -26,6 +26,7 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { ReportReportComponent } from './components/report-report/report-report.component';
 import { JobAllotmentComponent } from './components/job-allotment/job-allotment.component';
+import { SummaComponent } from './summa/summa.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { JobAllotmentComponent } from './components/job-allotment/job-allotment.
     SidenavbarComponent,
     ReportReportComponent,
     JobAllotmentComponent,
+    SummaComponent,
    
     
   ],
