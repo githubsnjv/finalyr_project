@@ -6,6 +6,7 @@ import { FormsComponent } from './components/forms/forms.component';
 import { JobAllotmentComponent } from './components/job-allotment/job-allotment.component';
 import { MachinecomponentComponent } from './components/machinecomponent/machinecomponent.component';
 import { MachinesComponent } from './components/machines/machines.component';
+import { SummaComponent } from './summa/summa.component';
 
 
 
@@ -15,7 +16,8 @@ const routes: Routes = [
   {path:'dash',component:DashboardComponent},
   {path:'allot',component:JobAllotmentComponent},
   {path:'report/:id',component:MachinecomponentComponent},
-  {path:"",redirectTo:'dash'}
+  {path:'summa',component:SummaComponent},
+  {path:"",redirectTo:'summa'}
 
 
 ];

@@ -2,10 +2,11 @@
     <div class="row">
         <div class="col-md-4 col-xl-4"></div>
         <div class="col-md-8 col-xl-8">
+            <div class="shadow-lg p-3 mb-5 bg-white rounded col-md-6 col-xl-6 my-2"><h1>Machine Monitoring</h1></div>
             <div *ngFor="let f of las">
                 <div class="row">
                     <div class="col-md-6 col-xl-6 my-2">
-                        <div class="card shadow border-start-primary py-2">
+                        <div class="shadow-lg p-3 mb-5 bg-white rounded">
                             <div class="card-body" (click)="cardshow(f)" [routerLink]="['/mach', f]">
                                 <div class="row align-items-center no-gutters">
                                     <div class="col me-2">
