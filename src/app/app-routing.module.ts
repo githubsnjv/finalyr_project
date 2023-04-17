@@ -8,6 +8,7 @@ import { MachinecomponentComponent } from './components/machinecomponent/machine
 import { MachinesComponent } from './components/machines/machines.component';
 import { SummaComponent } from './summa/summa.component';
 import { DCComponent } from './components/dc/dc.component';
+import { YarnInwardComponent } from './components/yarn-inward/yarn-inward.component';
 
 
 
@@ -19,7 +20,9 @@ const routes: Routes = [
   {path:'report/:id',component:MachinecomponentComponent},
   {path:'summa',component:SummaComponent},
   {path:'DC',component:DCComponent},
-  {path:"",redirectTo:'summa'}
+  {path:"",redirectTo:'summa'},
+  {path:"yarnIn",component:YarnInwardComponent}
+  
 
 
 ];
