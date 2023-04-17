@@ -26,7 +26,7 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { ReportReportComponent } from './components/report-report/report-report.component';
 import { JobAllotmentComponent } from './components/job-allotment/job-allotment.component';
-import { SummaComponent } from './summa/summa.component';
+
 import { DCComponent } from './components/dc/dc.component';
 import { YarnInwardComponent } from './components/yarn-inward/yarn-inward.component';
 
@@ -40,7 +40,7 @@ import { YarnInwardComponent } from './components/yarn-inward/yarn-inward.compon
     SidenavbarComponent,
     ReportReportComponent,
     JobAllotmentComponent,
-    SummaComponent,
+  
     DCComponent,
     YarnInwardComponent,
    
