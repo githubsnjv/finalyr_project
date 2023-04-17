@@ -10,7 +10,7 @@
         <div class="row">
           <div class="col-md-4 col-2"></div>
           <div class="col-md-8  col-6" style="width: 5cm;">
-            <form>
+            <form [formGroup]="yarnInward">
 
               <div>
                 <mat-form-field appearance="outline" class="example-full-width">
@@ -22,28 +22,28 @@
               <div>
                 <mat-form-field appearance="outline" class="example-full-width">
                   <mat-label>Yarn counts</mat-label>
-                  <input matInput placeholder="enter the details" formControlName="yarnname">
+                  <input matInput placeholder="enter the details" formControlName="yarncount">
                 </mat-form-field>
               </div>
 
               <div>
                 <mat-form-field appearance="outline" class="example-full-width">
                   <mat-label>No of bags</mat-label>
-                  <input matInput placeholder="enter the details" formControlName="yarnname">
+                  <input matInput placeholder="enter the details" formControlName="no_of_bags">
                 </mat-form-field>
               </div>
 
               <div>
                 <mat-form-field appearance="outline" class="example-full-width">
                   <mat-label>No.of half bags</mat-label>
-                  <input matInput placeholder="enter the details" formControlName="yarnname">
+                  <input matInput placeholder="enter the details" formControlName="no_of_halfbags">
                 </mat-form-field>
               </div>
 
               <div>
                 <mat-form-field appearance="outline" class="example-full-width">
                   <mat-label>Kgs of half bag</mat-label>
-                  <input matInput placeholder="enter the details" formControlName="yarnname">
+                  <input matInput placeholder="enter the details" formControlName="bags_in_kgs">
                 </mat-form-field>
               </div>
 
@@ -60,26 +60,26 @@
               <div>
                 <mat-form-field appearance="outline" class="example-full-width">
                   <mat-label>Received vehicle No</mat-label>
-                  <input matInput placeholder="enter the details" formControlName="yarnname">
+                  <input matInput placeholder="enter the details" formControlName="vehicle_no">
                 </mat-form-field>
               </div>
 
               <div>
                 <mat-form-field appearance="outline" class="example-full-width">
                   <mat-label>Received mill</mat-label>
-                  <input matInput placeholder="enter the details" formControlName="yarnname">
+                  <input matInput placeholder="enter the details" formControlName="mill">
                 </mat-form-field>
               </div>
 
               <div>
                 <mat-form-field appearance="outline" class="example-full-width">
                   <mat-label>Order company</mat-label>
-                  <input matInput placeholder="enter the details" formControlName="yarnname">
+                  <input matInput placeholder="enter the details" formControlName="company">
                 </mat-form-field>
               </div>
 
               <div class="div">
-                <button mat-stroked-button color="accent">upload</button>
+                <button mat-stroked-button color="accent" (click)="onSubmit()">upload</button>
               </div>
                             
             </form>
