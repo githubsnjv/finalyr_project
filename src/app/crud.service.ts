@@ -70,4 +70,10 @@ export class CrudService {
     
   }
 
+  yarninward_details(data:any){
+
+    this.afs.collection("yarnInward").doc("1").set(data);
+
+  }
+
 }

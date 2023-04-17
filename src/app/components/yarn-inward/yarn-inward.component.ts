@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { CrudService } from 'src/app/crud.service';
 
 
 @Component({
@@ -23,10 +24,12 @@ export class YarnInwardComponent implements OnInit {
 
   onSubmit(){
     console.log(this.yarnInward.value);
+    this.crud.yarninward_details(this.yarnInward.value);
+
   }
 
 
-  constructor() { }
+  constructor(private  crud:CrudService) { }
 
   ngOnInit(): void {
   }
