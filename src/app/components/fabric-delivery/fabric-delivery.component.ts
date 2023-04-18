@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-fabric-delivery',
@@ -11,5 +12,23 @@ export class FabricDeliveryComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  fabDelivery=new FormGroup({
+    fab_name:new FormControl(''),
+    order_number:new FormControl(''),
+    number_of_rolls:new FormControl(''),
+    total_weight:new FormControl(''),
+    company_name:new FormControl(''),
+    vehicle_number:new FormControl(''),
+    to_dying_company_name:new FormControl(''),
+    GG:new FormControl(''),
+    diameter:new FormControl(''),
+    GSM:new FormControl(''),
+    Remarks:new FormControl(''),
+    dc_number:new FormControl(''),
+    date_of_delivery:new FormControl('')
+
+
+  })
 
 }

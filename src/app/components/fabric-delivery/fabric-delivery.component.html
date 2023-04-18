@@ -13,90 +13,107 @@
                         <div class="lead">Fabric delivery</div>
                     </div>
 
-                    <div class="ms-5 mt-3">
-                        <mat-form-field appearance="outline" class="bg-white">
-                            <mat-label>Fabric name</mat-label>
-                            <input matInput placeholder="enter the details" formControlName="fab_name">
-                        </mat-form-field>
-                    </div>
+                    <form [formGroup]="fabDelivery">
 
-                    <div class="ms-5 mt-1">
-                        <mat-form-field appearance="outline" class="bg-white">
-                            <mat-label>order number</mat-label>
-                            <input matInput placeholder="enter the details" formControlName="order_number">
-                        </mat-form-field>
-                    </div>
+                        <div class="ms-5 mt-3">
+                            <mat-form-field appearance="outline" class="bg-white">
+                                <mat-label>Fabric name</mat-label>
+                                <input matInput placeholder="enter the details" formControlName="fab_name">
+                            </mat-form-field>
+                        </div>
+    
+                        <div class="ms-5 mt-1">
+                            <mat-form-field appearance="outline" class="bg-white">
+                                <mat-label>order number</mat-label>
+                                <input matInput placeholder="enter the details" formControlName="order_number">
+                            </mat-form-field>
+                        </div>
+    
+                        <div class="ms-5 mt-1">
+                            <mat-form-field appearance="outline" class="bg-white">
+                                <mat-label>number of rolls</mat-label>
+                                <input matInput placeholder="enter the details" formControlName="number_of_rolls">
+                            </mat-form-field>
+                        </div>
+    
+                        <mat-form-field appearance="fill">
+      <mat-label>date of delivery</mat-label>
+      <input matInput [matDatepicker]="picker" formControlName="date_of_delivery">
+      <mat-hint>MM/DD/YYYY</mat-hint>
+      <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+                        
+                        <div class="ms-5 mt-1">
+                            <mat-form-field appearance="outline" class="bg-white">
+                                <mat-label>total weight</mat-label>
+                                <input matInput placeholder="enter the details" formControlName="total_weight">
+                            </mat-form-field>
+                        </div>
+    
+                        <div class="ms-5 mt-1">
+                            <mat-form-field appearance="outline" class="bg-white">
+                                <mat-label>company name</mat-label>
+                                <input matInput placeholder="enter the details" formControlName="company_name">
+                            </mat-form-field>
+                        </div>
+    
+                        <div class="ms-5 mt-1">
+                            <mat-form-field appearance="outline" class="bg-white">
+                                <mat-label>vehicle number</mat-label>
+                                <input matInput placeholder="enter the details" formControlName="vehicle_number">
+                            </mat-form-field>
+                        </div>
+    
+                        <div class="ms-5 mt-1">
+                            <mat-form-field appearance="outline" class="bg-white">
+                                <mat-label>To dying company name</mat-label>
+                                <input matInput placeholder="enter the details" formControlName="to_dying_company_name">
+                            </mat-form-field>
+                        </div>
+    
+                        <div class="ms-5 mt-1">
+                            <mat-form-field appearance="outline" class="bg-white">
+                                <mat-label>GG</mat-label>
+                                <input matInput placeholder="enter the details" formControlName="GG">
+                            </mat-form-field>
+                        </div>
+    
+                        <div class="ms-5 mt-1">
+                            <mat-form-field appearance="outline" class="bg-white">
+                                <mat-label>diameter</mat-label>
+                                <input matInput placeholder="enter the details" formControlName="diameter">
+                            </mat-form-field>
+                        </div>
+    
+                        <div class="ms-5 mt-1">
+                            <mat-form-field appearance="outline" class="bg-white">
+                                <mat-label>GSM</mat-label>
+                                <input matInput placeholder="enter the details" formControlName="GSM">
+                            </mat-form-field>
+                        </div>
+    
+                        <div class="ms-5 mt-1">
+                            <mat-form-field appearance="outline" class="bg-white">
+                                <mat-label>Remarks</mat-label>
+                                <input matInput placeholder="enter the details" formControlName="Remarks">
+                            </mat-form-field>
+                        </div>
+    
+                        <div class="ms-5 mt-1">
+                            <mat-form-field appearance="outline" class="bg-white">
+                                <mat-label>dc number</mat-label>
+                                <input matInput placeholder="enter the details" formControlName="dc_number" >
+                            </mat-form-field>
+                        </div>
+    
+                        <div class="div">
+                            <button mat-stroked-button color="accent">upload</button>
+                          </div>
+    
 
-                    <div class="ms-5 mt-1">
-                        <mat-form-field appearance="outline" class="bg-white">
-                            <mat-label>number of rolls</mat-label>
-                            <input matInput placeholder="enter the details" formControlName="number_of_rolls">
-                        </mat-form-field>
-                    </div>
-
-                    <div class="ms-5 mt-1">
-                        <mat-form-field appearance="outline" class="bg-white">
-                            <mat-label>total weight</mat-label>
-                            <input matInput placeholder="enter the details" formControlName="total_weight">
-                        </mat-form-field>
-                    </div>
-
-                    <div class="ms-5 mt-1">
-                        <mat-form-field appearance="outline" class="bg-white">
-                            <mat-label>company name</mat-label>
-                            <input matInput placeholder="enter the details" formControlName="company_name">
-                        </mat-form-field>
-                    </div>
-
-                    <div class="ms-5 mt-1">
-                        <mat-form-field appearance="outline" class="bg-white">
-                            <mat-label>vehicle number</mat-label>
-                            <input matInput placeholder="enter the details" formControlName="vehicle_number">
-                        </mat-form-field>
-                    </div>
-
-                    <div class="ms-5 mt-1">
-                        <mat-form-field appearance="outline" class="bg-white">
-                            <mat-label>To dying company name</mat-label>
-                            <input matInput placeholder="enter the details" formControlName="to_dying_company_name">
-                        </mat-form-field>
-                    </div>
-
-                    <div class="ms-5 mt-1">
-                        <mat-form-field appearance="outline" class="bg-white">
-                            <mat-label>GG</mat-label>
-                            <input matInput placeholder="enter the details" formControlName="GG">
-                        </mat-form-field>
-                    </div>
-
-                    <div class="ms-5 mt-1">
-                        <mat-form-field appearance="outline" class="bg-white">
-                            <mat-label>diameter</mat-label>
-                            <input matInput placeholder="enter the details" formControlName="diameter">
-                        </mat-form-field>
-                    </div>
-
-                    <div class="ms-5 mt-1">
-                        <mat-form-field appearance="outline" class="bg-white">
-                            <mat-label>GSM</mat-label>
-                            <input matInput placeholder="enter the details" formControlName="GSM">
-                        </mat-form-field>
-                    </div>
-
-                    <div class="ms-5 mt-1">
-                        <mat-form-field appearance="outline" class="bg-white">
-                            <mat-label>Remarks</mat-label>
-                            <input matInput placeholder="enter the details" formControlName="Remarks">
-                        </mat-form-field>
-                    </div>
-
-                    <div class="ms-5 mt-1">
-                        <mat-form-field appearance="outline" class="bg-white">
-                            <mat-label>dc number</mat-label>
-                            <input matInput placeholder="enter the details" formControlName="dc_number" >
-                        </mat-form-field>
-                    </div>
-
+                    </form>
+                    
                 </div>
             </div>
         </div>
