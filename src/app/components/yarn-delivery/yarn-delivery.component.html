@@ -10,7 +10,7 @@
         <div class="row">
           <div class="col-md-4 col-2"></div>
           <div class="col-md-8  col-6" style="width: 5cm;">
-            <form >
+            <form [formGroup]="yarnDelivery">
 
               <div>
                 <mat-form-field appearance="outline" class="example-full-width">
@@ -57,7 +57,7 @@
               <div class="div">
                 <mat-form-field appearance="outline">
                   <mat-label>Delivery date</mat-label>
-                  <input matInput [matDatepicker]="picker" formControlName="received_date"><mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                  <input matInput [matDatepicker]="picker" formControlName="delivered_date"><mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
                   <mat-hint>MM/DD/YYYY</mat-hint>
                   
                   <mat-datepicker #picker></mat-datepicker>
@@ -67,26 +67,26 @@
               <div>
                 <mat-form-field appearance="outline" class="example-full-width">
                   <mat-label>Delivery vehicle No</mat-label>
-                  <input matInput placeholder="Enter the details" formControlName="vehicle_no">
+                  <input matInput placeholder="Enter the details" formControlName="delivery_vehicle_no">
                 </mat-form-field>
               </div>
 
               <div>
                 <mat-form-field appearance="outline" class="example-full-width">
-                  <mat-label>Delivery mill</mat-label>
+                  <mat-label>mill</mat-label>
                   <input matInput placeholder="Enter the details" formControlName="mill">
                 </mat-form-field>
               </div>
 
               <div>
                 <mat-form-field appearance="outline" class="example-full-width">
-                  <mat-label>Delivery company</mat-label>
+                  <mat-label>company name</mat-label>
                   <input matInput placeholder="Enter the details" formControlName="company">
                 </mat-form-field>
               </div>
 
               <div class="div">
-                <button mat-stroked-button color="accent">upload</button>
+                <button mat-stroked-button color="accent" (click)="onSubmit()">upload</button>
               </div>
                             
             </form>
