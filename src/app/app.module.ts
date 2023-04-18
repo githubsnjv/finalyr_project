@@ -29,6 +29,7 @@ import { JobAllotmentComponent } from './components/job-allotment/job-allotment.
 import { SummaComponent } from './summa/summa.component';
 import { DCComponent } from './components/dc/dc.component';
 import { YarnInwardComponent } from './components/yarn-inward/yarn-inward.component';
+import { FabricDeliveryComponent } from './components/fabric-delivery/fabric-delivery.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { YarnInwardComponent } from './components/yarn-inward/yarn-inward.compon
     SummaComponent,
     DCComponent,
     YarnInwardComponent,
+    FabricDeliveryComponent,
    
     
   ],

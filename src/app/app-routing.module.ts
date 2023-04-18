@@ -9,6 +9,7 @@ import { MachinesComponent } from './components/machines/machines.component';
 import { SummaComponent } from './summa/summa.component';
 import { DCComponent } from './components/dc/dc.component';
 import { YarnInwardComponent } from './components/yarn-inward/yarn-inward.component';
+import { FabricDeliveryComponent } from './components/fabric-delivery/fabric-delivery.component';
 
 
 
@@ -21,7 +22,8 @@ const routes: Routes = [
   {path:'summa',component:SummaComponent},
   {path:'DC',component:DCComponent},
   {path:"",redirectTo:'summa'},
-  {path:"yarnIn",component:YarnInwardComponent}
+  {path:"yarnIn",component:YarnInwardComponent},
+  {path:"fabdelivery",component:FabricDeliveryComponent}
   
 
 
