@@ -10,6 +10,7 @@ import { SummaComponent } from './summa/summa.component';
 import { DCComponent } from './components/dc/dc.component';
 import { YarnInwardComponent } from './components/yarn-inward/yarn-inward.component';
 import { FabricDeliveryComponent } from './components/fabric-delivery/fabric-delivery.component';
+import { YarnDeliveryComponent } from './components/yarn-delivery/yarn-delivery.component';
 
 
 
@@ -23,7 +24,8 @@ const routes: Routes = [
   {path:'DC',component:DCComponent},
   {path:"",redirectTo:'summa'},
   {path:"yarnIn",component:YarnInwardComponent},
-  {path:"fabdelivery",component:FabricDeliveryComponent}
+  {path:"fabdelivery",component:FabricDeliveryComponent},
+  {path:"yarnDelivery",component:YarnDeliveryComponent}
   
 
 
