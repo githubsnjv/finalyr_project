@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CrudService } from 'src/app/crud.service';
 import { ActivatedRoute } from '@angular/router';
+import { DashserviceService } from 'src/app/dashservice.service';
 
 
 @Component({
@@ -12,14 +13,14 @@ export class MachinesComponent implements OnInit{
 
   res:any;
   mac_id:any;
+  job_details:any;
 
-  constructor(private data:CrudService, private route: ActivatedRoute) {
+  constructor(private data:CrudService, private route: ActivatedRoute,private ser:DashserviceService) {
 
      //get the route data 
 
      this.route.paramMap.subscribe(params => {
-      console.log(params.get('id'),"from mach component")
-      this.mac_id=params.get('id');
+       this.mac_id=params.get('id');
 
       
         })
@@ -28,17 +29,29 @@ export class MachinesComponent implements OnInit{
    // receive the particular machine data
 
     
+  }
 
-    
 
-   }
 
    ngOnInit(): void {
 
-    this.data.retrive(this.mac_id).subscribe(res=>{
-      this.res=res;
-      console.log(res,"retrived vaLUE PARTICULAR ID");
-    })
+    this.jobReceiver();
+
+  //   this.data.retrive(this.mac_id).subscribe(res=>{
+  //     this.res=res;
+  //     console.log(res,"retrived vaLUE PARTICULAR ID");
+  //   })
    
-  }
+  // }
+   }
+
+
+   jobReceiver(){
+    this.ser.receive_job("1").subscribe(res=>{
+      this.job_details=res;
+      console.log(this.job_details);
+    })
+   }
+
+
   }

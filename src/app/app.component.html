@@ -1,7 +1,8 @@
-<mat-toolbar color="primary">
+<mat-toolbar color="primary">  
     <button mat-icon-button (click)="tog=!tog" class="example-icon" aria-label="Example icon-button with menu icon">
         <mat-icon>menu</mat-icon>
     </button>
+    <h1 class="title">SHIRI VASAVA NITTERS</h1>
 </mat-toolbar>
 
 
@@ -9,24 +10,24 @@
 
     <mat-sidenav [opened]="tog" mode="over">
         <div>
-            <div class="card align-items-center mt-1 bg-primary">
-                <h1 class="mt-3">SVK</h1>
+            <div class="card align-items-center">
+                <h1 class="mt-3 btn btn-outline-warning">SVK</h1>
             </div>
 
-            <div class="card shadow-lg mt-1 bg-primary">
+            <!-- <div class="card shadow-lg mt-1 bg-primary"> -->
 
-                <div class="card shadow text-dark mt-1 mx-1">
-                    <div class="mt-3">
-                        <ul><i class="fa-sharp fa-solid fa-gear fa-2x"></i><a class=" fw-bold ms-2"
-                                style="font-size: 20px;" href="dash">Dashboard</a></ul>
+                <div class="card shadow  ">
+                    <div class="mt-3 btn btn-outline-dark">
+                        <ul><i class="fa-sharp fa-solid fa-gear "></i><a class=" fw-bold ms-2"
+                                 href="dash">Dashboard</a></ul>
                     </div>
 
                 </div>
                <!-- DC card -->
-                <div class="card shadow text-dark mt-1 mx-1">
-                    <div class="mt-3">
-                        <ul><i class="fa-sharp fa-solid fa-gear fa-2x"></i><a class=" fw-bold ms-2"
-                                style="font-size: 20px;" href="DC">DC</a></ul>
+                <div class="card shadow">
+                    <div class="mt-3 btn btn-outline-dark">
+                        <ul><i class="fa-sharp fa-solid fa-gear "></i><a class=" fw-bold ms-2"
+                                 href="DC">DC</a></ul>
                     </div>
 
                 </div>
@@ -51,7 +52,7 @@
 
             </div>
 
-        </div>
+        <!-- </div> -->
     </mat-sidenav>
 
     <mat-sidenav-content>
