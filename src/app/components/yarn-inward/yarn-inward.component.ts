@@ -25,7 +25,7 @@ export class YarnInwardComponent implements OnInit {
 
   onSubmit(){
     console.log(this.yarnInward.value);
-    this.crud.yarninward_details(this.yarnInward.value);
+    // this.crud.yarninward_details(this.yarnInward.value); left for update in Db
 
   }
 
