@@ -35,7 +35,7 @@ export class FabricDeliveryComponent implements OnInit {
 
   onSubmit(){
     console.log(this.fabDelivery.value);
-    // this.crud.fabDelivery_details(this.fabDelivery.value); left for update
+    
 
   }
 
