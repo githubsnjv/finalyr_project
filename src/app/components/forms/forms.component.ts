@@ -4,8 +4,8 @@ import { CrudService } from 'src/app/crud.service';
 import { FormBuilder } from '@angular/forms';
 import { take,map } from 'rxjs';
 import { ActivatedRoute, Router } from '@angular/router';
-import { DashserviceService } from 'src/app/dashservice.service';
-
+import { DashserviceService } from 'src/app/dashservice.service'
+import { JobCount } from 'src/app/job-count';
 
 
 @Component({
@@ -31,6 +31,8 @@ export class FormsComponent implements OnInit {
 
     //get the total number of machine counts and add it into the spinner
 
+    this.sub()
+
     this.data.machine_count().pipe(take(1),map((res:any)=>{
       return res.counts;
     })).subscribe(rs=>{
@@ -48,6 +50,9 @@ export class FormsComponent implements OnInit {
   
 
   ngOnInit() {
+
+
+
     this.profileForm = this.fb.group({
       yarnname: ['',Validators.required],
       quantity: [''],
@@ -60,6 +65,8 @@ export class FormsComponent implements OnInit {
       mac_no:['']
      
     });
+
+    
   }
 
   //form reset
@@ -88,15 +95,22 @@ export class FormsComponent implements OnInit {
     //     this.data.job_id_to_machine(this.profileForm.value,this.job_number)
 
 
+    this.ser.receive_job("1").subscribe(res=>{
+      console.log(res)
+    })
+
+
       this.ser.receive_new_job_number().subscribe((res:any)=>{
-        this.new_job_number=res.c.toString();
+        this.new_job_number=res.c+1;
+        
+        this.num=Number(this.new_job_number)+1;
+        this.new_job_number=this.num.toString();
+        console.log(this.new_job_number)
+      // UPLOAD THE JOB DETAILS TO FIREBASE
+      // this.ser.upload_job(this.new_job_number.toString(),this.profileForm.value);
       })
 
-      // update the data to DB
-      this.num=Number(this.new_job_number)
-      this.new_job_number=this.num+1;
-      this.ser.upload_job("2",this.profileForm.value)
-      console.log(this.num,typeof(this.new_job_number))
+      
        
       // this.formReset();
       this.route.navigateByUrl("/dash")
