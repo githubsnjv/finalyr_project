@@ -28,7 +28,7 @@ export class YarnDeliveryComponent implements OnInit {
   }
   onSubmit(){
     console.log(this.yarnDelivery.value);
-    // this.crud.yarnDelivery_details(this.yarnDelivery.value); left for update
+    
 
   }
 
