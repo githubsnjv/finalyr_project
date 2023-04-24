@@ -31,7 +31,7 @@ export class FormsComponent implements OnInit {
 
     //get the total number of machine counts and add it into the spinner
 
-    this.sub()
+    
 
     this.data.machine_count().pipe(take(1),map((res:any)=>{
       return res.counts;
@@ -95,25 +95,28 @@ export class FormsComponent implements OnInit {
     //     this.data.job_id_to_machine(this.profileForm.value,this.job_number)
 
 
-    this.ser.receive_job("1").subscribe(res=>{
-      console.log(res)
-    })
+    // this.ser.receive_job("1").subscribe(res=>{
+    //   console.log(res)
+    // })
 
 
       this.ser.receive_new_job_number().subscribe((res:any)=>{
-        this.new_job_number=res.c+1;
+        this.new_job_number=res.c;
         
         this.num=Number(this.new_job_number)+1;
         this.new_job_number=this.num.toString();
         console.log(this.new_job_number)
       // UPLOAD THE JOB DETAILS TO FIREBASE
-      // this.ser.upload_job(this.new_job_number.toString(),this.profileForm.value);
+      this.ser.upload_job(this.new_job_number,this.profileForm.value);
+      //job count update
+    
       })
 
       
        
       // this.formReset();
       this.route.navigateByUrl("/dash")
+      this.ser.job_count_update(this.new_job_number); 
       
  
 

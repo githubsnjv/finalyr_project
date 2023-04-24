@@ -14,6 +14,7 @@ export class MachinesComponent implements OnInit{
   res:any;
   mac_id:any;
   job_details:any;
+  mac_details:any
 
   constructor(private data:CrudService, private route: ActivatedRoute,private ser:DashserviceService) {
 
@@ -35,7 +36,7 @@ export class MachinesComponent implements OnInit{
 
    ngOnInit(): void {
 
-    this.jobReceiver();
+    this.jobReceiver(this.mac_id);
 
   //   this.data.retrive(this.mac_id).subscribe(res=>{
   //     this.res=res;
@@ -46,10 +47,17 @@ export class MachinesComponent implements OnInit{
    }
 
 
-   jobReceiver(){
-    this.ser.receive_job("1").subscribe(res=>{
+   jobReceiver(mac:any){
+    this.ser.receive_job(mac).subscribe(res=>{
       this.job_details=res;
       console.log(this.job_details);
+    })
+   }
+
+   machine_receiver(){
+    this.ser.receive_mac(this.mac_id).subscribe(r=>{
+      this.mac_details=r;
+      console.log(r,"mac id s")
     })
    }
 
