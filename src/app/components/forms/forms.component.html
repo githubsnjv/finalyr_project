@@ -22,7 +22,7 @@
 
               <div>
                 <mat-form-field appearance="outline">
-                  <mat-label>Yarn Quantity</mat-label>
+                  <mat-label>No of bags</mat-label>
                   <input matInput placeholder="enter the details" formControlName="quantity">
                 </mat-form-field>
               </div>
@@ -52,7 +52,7 @@
               <div class="div">
                 <mat-form-field appearance="outline">
                   <mat-label>Choose a date</mat-label>
-                  <input matInput [matDatepicker]="picker" formControlName="received_date"><mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                  <input matInput type="date" formControlName="received_date"><mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
                   <mat-hint>MM/DD/YYYY</mat-hint>
                   
                   <mat-datepicker #picker></mat-datepicker>
