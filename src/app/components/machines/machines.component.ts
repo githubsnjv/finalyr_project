@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CrudService } from 'src/app/crud.service';
 import { ActivatedRoute } from '@angular/router';
+import { AngularFireDatabase} from '@angular/fire/compat/database';
 
 
 @Component({
@@ -14,8 +15,10 @@ export class MachinesComponent implements OnInit{
   mac_id:any;
   machines:any;
   rdb:any
+  max_count:any
+  reset1:any
 
-  constructor(private data:CrudService, private route: ActivatedRoute) {
+  constructor(private data:CrudService, private route: ActivatedRoute,private ang:AngularFireDatabase) {
 
      //get the route data 
 
@@ -49,8 +52,17 @@ export class MachinesComponent implements OnInit{
 
     this.data.rdb().subscribe((d:any)=>{
       this.rdb=d[0];
-      console.log(d,"xxxxxxxxxxxxxxxxxxxxxxxxxx")
+      console.log(this.rdb,"xxxxxxxxxxxxxxxxxxxxxxxxxx")
     })
    
   }
+
+  up(){
+    const tutRef = this.ang.object('machine status/1');
+    tutRef.update({ reset: Number(this.reset1)});
+    tutRef.update({ maxcount: Number(this.max_count)});
+    this.reset1='';
+    this.max_count='';
+  }
+
   }

@@ -80,7 +80,7 @@ export class CrudService {
   }
 
   rdb(){
-    return this.ang.list('data/').valueChanges();
+    return this.ang.list('machine status').valueChanges();
   }
 
 }
