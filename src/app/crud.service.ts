@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import {AngularFirestore} from '@angular/fire/compat/firestore'
 import { FormBuilder } from '@angular/forms';
 import { map } from 'rxjs';
+import { AngularFireDatabase} from '@angular/fire/compat/database';
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +10,7 @@ import { map } from 'rxjs';
 export class CrudService {
 
  
-  constructor(private afs:AngularFirestore) { }
+  constructor(private afs:AngularFirestore,private ang:AngularFireDatabase) { }
 
   add() {
     this.afs.collection("/final").doc("1").set({rpm:120});
@@ -45,6 +46,10 @@ export class CrudService {
     return this.afs.collection("machines").valueChanges();
   }
 
+  getmac_det(){
+    return this.afs.collection("machines").doc("1").valueChanges();
+  }
+
   job_number_retrival(){
     return this.afs.collection("machine_details").doc("job number").valueChanges();
   }
@@ -68,6 +73,14 @@ export class CrudService {
   dailyallotment_job(mac:any,data:any){
     this.afs.collection('loom_automation').doc('machines').collection(data.mac_no.toString()).doc(new Date().toString()).set(data);
     
+  }
+
+  mac_num_details(id:any){
+    return this.afs.collection("/SVK/data/mac").doc(id.toString()).valueChanges();
+  }
+
+  rdb(){
+    return this.ang.list('data/').valueChanges();
   }
 
 }
