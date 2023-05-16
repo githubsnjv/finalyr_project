@@ -83,4 +83,8 @@ export class CrudService {
     return this.ang.list('machine status').valueChanges();
   }
 
+  yarninward(res:any){
+    this.afs.collection("yarnInward").doc().set(res);
+  }
+
 }

@@ -8,6 +8,9 @@ import { MachinecomponentComponent } from './components/machinecomponent/machine
 import { MachinesComponent } from './components/machines/machines.component';
 
 import { DCComponent } from './components/dc/dc.component';
+import { YarnInwardComponent } from './components/yarn-inward/yarn-inward.component';
+import { YarndeliveryComponent } from './components/yarndelivery/yarndelivery.component';
+import { FabricdeliveryComponent } from './components/fabricdelivery/fabricdelivery.component';
 
 
 
@@ -19,7 +22,10 @@ const routes: Routes = [
   {path:'report/:id',component:MachinecomponentComponent},
   {path:'summa',component:DashboardComponent},
   {path:'DC',component:DCComponent},
-  {path:"",redirectTo:'dash'}
+  {path:"",redirectTo:'dash'},
+  {path:"yarnin",component:YarnInwardComponent},
+  {path:"yarndeli",component:YarndeliveryComponent},
+  {path:"fabdeli",component:FabricdeliveryComponent}
 
 
 ];
