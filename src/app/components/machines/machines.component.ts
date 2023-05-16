@@ -64,5 +64,6 @@ export class MachinesComponent implements OnInit{
     this.reset1='';
     this.max_count='';
   }
+  
 
   }

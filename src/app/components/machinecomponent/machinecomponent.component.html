@@ -1,115 +1,245 @@
-<div id="wrapper">
-    <div class="d-flex flex-column" id="content-wrapper">
-        <div id="content">
+<div class="conatiner">
 
-            <div class="container-fluid">
-                <br>
-                
-                <div class="row">
-                    <div class="col-md-6 col-xl-3 mb-4">
-                        <div class="card shadow border-start-primary py-2">
+
+
+    <div id="wrapper" class="mt-3">
+        <div id="content-wrapper" class="d-flex flex-column">
+            <div id="content">
+
+                <div class="container-fluid">
+
+                    <div class="row">
+                        <div class="col-3">
+                            <!-- status collapse -->
+
+                        <div class="card shadow border-start-warning py-2 mb-3 mt-3">
                             <div class="card-body">
                                 <div class="row align-items-center no-gutters">
                                     <div class="col me-2">
-                                        <div class="text-uppercase text-primary fw-bold text-xs mb-1"><span>total output</span></div>
-                                        <div class="text-dark fw-bold h5 mb-0"><span></span></div>
-                                    </div>
-                                    <div class="col-auto"><i class="fas fa-calendar fa-2x text-gray-300"></i></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-xl-3 mb-4">
-                        <div class="card shadow border-start-primary py-2">
-                            <div class="card-body">
-                                <div class="row align-items-center no-gutters">
-                                    <div class="col me-2">
-                                        <div class="text-uppercase text-info fw-bold text-xs mb-1"><span>Job number</span></div>
-                                        <div class="text-dark fw-bold h5 mb-0"><span></span></div>
-                                    </div>
-                                    <div class="col-auto"><i class="fas fa-calendar fa-2x text-gray-300"></i></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-xl-3 mb-4">
-                        <div class="card shadow border-start-primary py-2">
-                            <div class="card-body">
-                                <div class="row align-items-center no-gutters">
-                                    <div class="col me-2">
-                                        <div class="text-uppercase text-primary fw-bold text-xs mb-1"><span>shift date</span></div>
-                                        <div class="text-dark fw-bold h5 mb-0"><span></span></div>
-                                    </div>
-                                    <div class="col-auto"><i class="fas fa-calendar fa-2x text-gray-300"></i></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-xl-3 mb-4">
-                        <div class="card shadow border-start-success py-2">
-                            <div class="card-body">
-                                <div class="row align-items-center no-gutters">
-                                    <div class="col me-2">
-                                        <div class="text-uppercase text-success fw-bold text-xs mb-1"><span>stop count</span></div>
-                                        <div class="text-dark fw-bold h5 mb-0"><span></span></div>
-                                    </div>
-                                    <div class="col-auto"><i class="fas fa-dollar-sign fa-2x text-gray-300"></i></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-xl-3 mb-4">
-                        <div class="card shadow border-start-info py-2">
-                            <div class="card-body">
-                                <div class="row align-items-center no-gutters">
-                                    <div class="col me-2">
-                                        <div class="text-uppercase text-info fw-bold text-xs mb-1"><span>no of rolls</span>
+                                        <div class="text-uppercase text-success fw-bold text-xs"><span> Machine stop
+                                                count
+                                            </span>
                                         </div>
-                                        <div class="row g-0 align-items-center">
-                                            <div class="col-auto">
-                                                <div class="text-dark fw-bold h5 mb-0 me-3"><span>%</span></div>
+                                        <div class="text-dark fw-bold h5 mb-0"><span>{{rdb.Count}}</span></div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card shadow border-start-warning py-2 mb-3 mt-1">
+                            <div class="card-body">
+                                <div class="row align-items-center no-gutters">
+                                    <div class="col me-2">
+                                        <div class="text-uppercase text-success fw-bold text-xs mb-1"><span> Machine
+                                                storage count
+                                            </span>
+                                        </div>
+                                        <div class="text-dark fw-bold h5 mb-0"><span>{{rdb.STC}}</span></div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card shadow border-start-warning py-2 mb-3">
+                            <div class="card-body">
+                                <div class="row align-items-center no-gutters">
+                                    <div class="col me-2">
+                                        <div class="text-uppercase text-success fw-bold text-xs mb-1"><span> Machine
+                                                RPM
+                                            </span>
+                                        </div>
+                                        <div class="text-dark fw-bold h5 mb-0"><span>{{rdb.RPM}}</span></div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+
+
+                        <div class="col-3">
+                            <div class="card shadow border-start-warning py-2 mb-3">
+                                <div class="card-body">
+                                    <div class="row align-items-center no-gutters">
+                                        <div class="col me-2">
+                                            <div class="text-uppercase text-success fw-bold text-xs mb-1"><span>No.of
+                                                    Rolls
+                                                </span>
                                             </div>
-                                            <div class="col">
-                                                <div class="progress progress-sm">
-                                                    <div class="progress-bar bg-info" aria-valuenow="50"
-                                                        aria-valuemin="0" aria-valuemax="100" style="width: 50%;"><span
-                                                            class="visually-hidden">%</span></div>
+                                            <div class="text-dark fw-bold h5 mb-0"><span>{{rdb.role}}</span></div>
+                                        </div>
+                                       
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="card shadow border-start-warning py-2 mb-3">
+                                <div class="card-body">
+                                    <div class="row align-items-center no-gutters">
+                                        <div class="col me-2">
+                                            <div class="text-uppercase text-success fw-bold text-xs mb-1"><span>Storage
+                                                </span>
+                                            </div>
+                                            <div class="text-dark fw-bold h5 mb-0"><span>{{rdb.STORAGE}}</span></div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+    
+                                <div class="card shadow border-start-warning py-2 mb-3">
+                                    <div class="card-body">
+                                        <div class="row align-items-center no-gutters">
+                                            <div class="col me-2">
+                                                <div class="text-uppercase text-warning fw-bold text-xs mb-1"><span> Yarn
+                                                        Count</span>
+                                                </div>
+                                                <div class="text-dark fw-bold h5 mb-0"><span>{{machines.counts}}</span>
                                                 </div>
                                             </div>
+                                            
                                         </div>
                                     </div>
-                                    <div class="col-auto"><i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+                                </div>
+    
+                        </div>
+                        <div class="col-3">
+                            <div class="card shadow border-start-warning py-2 mb-3">
+                                <div class="card-body">
+                                    <div class="row align-items-center no-gutters">
+                                        <div class="col me-2">
+                                            <div class="text-uppercase text-warning fw-bold text-xs mb-1"><span> Machine
+                                                    Diameter</span>
+                                            </div>
+                                            <div class="text-dark fw-bold h5 mb-0"><span>{{machines.dia}}</span></div>
+                                        </div>
+                                        
                                     </div>
                                 </div>
                             </div>
+
+                            <div class="card shadow border-start-warning py-2 mb-3">
+                                <div class="card-body">
+                                    <div class="row align-items-center no-gutters">
+                                        <div class="col me-2">
+                                            <div class="text-uppercase text-warning fw-bold text-xs mb-1"><span> Yarn
+                                                    Colour
+                                                </span>
+                                            </div>
+                                            <div class="text-dark fw-bold h5 mb-0"><span>{{machines.colour}}</span>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card shadow border-start-warning py-2 mb-3">
+                                <div class="card-body">
+                                    <div class="row align-items-center no-gutters">
+                                        <div class="col me-2">
+                                            <div class="text-uppercase text-warning fw-bold text-xs mb-1"><span>No. of
+                                                    bags
+                                                </span>
+                                            </div>
+                                            <div class="text-dark fw-bold h5 mb-0"><span>{{machines.quantity}}</span>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                        <div class="col-3">
+                            <div class="card shadow border-start-warning py-2 mb-3">
+                                <div class="card-body">
+                                    <div class="row align-items-center no-gutters">
+                                        <div class="col me-2">
+                                            <div class="text-uppercase text-warning fw-bold text-xs mb-1"><span>Yarn
+                                                    weight
+                                                </span>
+                                            </div>
+                                            <div class="text-dark fw-bold h5 mb-0"><span>{{machines.weight}}</span>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card shadow border-start-warning py-2 mb-3">
+                                <div class="card-body">
+                                    <div class="row align-items-center no-gutters">
+                                        <div class="col me-2">
+                                            <div class="text-uppercase text-warning fw-bold text-xs mb-1"><span>Machine GG
+                                                </span>
+                                            </div>
+                                            <div class="text-dark fw-bold h5 mb-0"><span>{{machines.gg}}</span></div>
+                                        </div>
+                                      
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card shadow border-start-warning py-2 mb-3">
+                                <div class="card-body">
+                                    <div class="row align-items-center no-gutters">
+                                        <div class="col me-2">
+                                            <div class="text-uppercase text-warning fw-bold text-xs mb-1"><span>Received
+                                                    date
+                                                </span>
+                                            </div>
+                                            <div class="text-dark fw-bold h5 mb-0">
+                                                <span>{{machines.received_date}}</span></div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
-                    <div class="col-md-6 col-xl-3 mb-4">
-                        <div class="card shadow border-start-warning py-2">
-                            <div class="card-body">
-                                <div class="row align-items-center no-gutters">
-                                    <div class="col me-2">
-                                        <div class="text-uppercase text-warning fw-bold text-xs mb-1"><span>time of status off</span></div>
-                                        <div class="text-dark fw-bold h5 mb-0"><span></span></div>
-                                    </div>
-                                    <div class="col-auto"><i class="fas fa-comments fa-2x text-gray-300"></i></div>
+
+
+                        
+
+                        
+                            
+                           
+
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-4"></div>
+                            <div class="col-4">
+                                <div>
+                                    <button (click)="print()" class="btn btn-primary"><i
+                                            class="fas fa-download fa-sm text-white-50"></i>Print Report</button>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="d-sm-flex justify-content-between align-items-center mb-4">
-                    <a class="btn btn-primary "
-                        role="button" href="#" (click)="print()"><i class="fas fa-download fa-sm text-white-50"></i>&nbsp;print
-                        Report</a>
-                </div>
-                
-                
-            </div>
-        </div>
+                        
+                        <br>
+
+                     
+
+
         
-   
-</div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
-<script src="assets/js/script.min.js"></script>
+
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+
+
+
+    </div>
